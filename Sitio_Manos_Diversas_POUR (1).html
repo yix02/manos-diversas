@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manos Diversas | Trabajo con inclusión</title>
+<meta name="description" content="Manos Diversas ofrece servicios de maquila, armado de kits, etiquetado y empaque con inclusión laboral.">
+<style>
+:root { --bg:#ffffff; --text:#17202a; --surface:#f4f6f8; --accent:#1f2937; --focus:#005fcc; --max:1100px; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; font-family:Arial, Helvetica, sans-serif; background:var(--bg); color:var(--text); line-height:1.6; font-size:18px; }
+a { color:#0645ad; }
+a:focus, button:focus { outline:4px solid var(--focus); outline-offset:3px; }
+.skip { position:absolute; left:-9999px; top:auto; }
+.skip:focus { left:1rem; top:1rem; z-index:1000; background:#fff; padding:.75rem 1rem; border:3px solid var(--focus); }
+header { background:var(--accent); color:#fff; }
+.header-inner { max-width:var(--max); margin:auto; padding:1rem 1.25rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+.logo { font-weight:800; font-size:1.5rem; }
+nav ul { list-style:none; display:flex; gap:1rem; padding:0; margin:0; flex-wrap:wrap; }
+nav a { color:#fff; text-decoration:underline; font-weight:700; }
+main { max-width:var(--max); margin:auto; padding:0 1.25rem 3rem; }
+.hero { background:#e8f0fe; padding:3rem 1.5rem; border-radius:0 0 1rem 1rem; }
+.hero h1 { font-size:clamp(2rem,5vw,3.4rem); margin:.2rem 0 1rem; }
+.button { display:inline-block; background:var(--accent); color:#fff; padding:.8rem 1rem; border-radius:.5rem; font-weight:700; text-decoration:none; }
+.controls { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:1rem; }
+button { font:inherit; padding:.5rem .75rem; border:2px solid var(--accent); background:#fff; color:var(--text); border-radius:.4rem; cursor:pointer; }
+section { padding:2.5rem 0; border-bottom:1px solid #c7cdd4; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; }
+.card { background:var(--surface); padding:1.25rem; border-radius:.75rem; border:2px solid #c7cdd4; }
+h2 { font-size:2rem; }
+h3 { font-size:1.35rem; }
+footer { background:#f4f6f8; padding:2rem 1.25rem; }
+footer .inner { max-width:var(--max); margin:auto; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.high-contrast { --bg:#000; --text:#fff; --surface:#111; --accent:#000; --focus:#ff0; }
+.high-contrast header, .high-contrast footer { background:#000; }
+.high-contrast .hero, .high-contrast .card { background:#111; border-color:#fff; }
+.high-contrast a { color:#ffff00; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido principal</a>
+<header>
+  <div class="header-inner">
+    <div class="logo" aria-label="Manos Diversas">MANOS DIVERSAS</div>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#proyecto">Proyecto</a></li>
+        <li><a href="#empresas">Empresas</a></li>
+        <li><a href="#impacto">Impacto</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+<section id="inicio" class="hero" aria-labelledby="titulo">
+  <h1 id="titulo">Trabajo con inclusión, talento con oportunidades.</h1>
+  <p>Manos Diversas es un modelo de negocio inclusivo que ofrece servicios de maquila, armado de kits, etiquetado y empaque, mientras crea oportunidades de empleo formal para personas con discapacidad intelectual o dentro del espectro autista.</p>
+  <a class="button" href="#proyecto">Conoce el proyecto</a>
+  <div class="controls" aria-label="Controles de accesibilidad">
+    <button type="button" onclick="changeSize(1)" aria-label="Aumentar tamaño del texto">Aumentar texto</button>
+    <button type="button" onclick="changeSize(-1)" aria-label="Disminuir tamaño del texto">Disminuir texto</button>
+    <button type="button" onclick="toggleContrast()" aria-pressed="false" id="contrastBtn">Alto contraste</button>
+  </div>
+</section>
+
+<section id="proyecto" aria-labelledby="proyecto-title">
+<h2 id="proyecto-title">Nuestro proyecto</h2>
+<div class="cards">
+  <article class="card"><h3>¿Qué problema atendemos?</h3><p>La exclusión laboral de personas con discapacidad intelectual y autismo, que puede limitar su independencia económica y sus oportunidades de desarrollo.</p></article>
+  <article class="card"><h3>¿Qué ofrecemos?</h3><p>Servicios de empaque, armado de kits, etiquetado y embalaje para empresas que necesitan apoyo operativo de calidad.</p></article>
+  <article class="card"><h3>¿Cómo trabajamos?</h3><p>Con tareas adaptadas, guías visuales, espacios de trabajo accesibles y acompañamiento de tutores laborales.</p></article>
+</div>
+</section>
+
+<section id="empresas" aria-labelledby="empresas-title">
+<h2 id="empresas-title">Para empresas</h2>
+<p>Las marcas pueden contratar un servicio real de maquila y empaque y, al mismo tiempo, contribuir a la inclusión laboral. El cobro puede realizarse por proyecto, lote o pieza empaquetada.</p>
+<div class="card"><h3>Servicio con impacto</h3><p>Las empresas pueden utilizar un sello de “Empacado con Inclusión” como elemento de comunicación de su compromiso social, siempre que corresponda al servicio contratado.</p></div>
+</section>
+
+<section id="impacto" aria-labelledby="impacto-title">
+<h2 id="impacto-title">Impacto esperado</h2>
+<div class="cards">
+  <article class="card"><h3>Empleo formal</h3><p>Crear oportunidades de trabajo con sueldo y prestaciones, dentro de un entorno adaptado.</p></article>
+  <article class="card"><h3>Desarrollo de habilidades</h3><p>Fortalecer habilidades laborales y de vida diaria mediante acompañamiento.</p></article>
+  <article class="card"><h3>Crecimiento</h3><p>Iniciar con un taller local y posteriormente replicar el modelo en otras ciudades.</p></article>
+</div>
+</section>
+
+<section id="accesibilidad" aria-labelledby="access-title">
+<h2 id="access-title">Accesibilidad y metodología POUR</h2>
+<div class="cards">
+  <article class="card"><h3>Perceptible</h3><p>Contenido textual claro, jerarquía de encabezados, contraste suficiente y controles que no dependen únicamente del color.</p></article>
+  <article class="card"><h3>Operable</h3><p>Navegación mediante enlaces visibles, estructura sencilla, foco de teclado y enlace para saltar al contenido.</p></article>
+  <article class="card"><h3>Comprensible</h3><p>Lenguaje directo, secciones consistentes, títulos descriptivos e instrucciones sencillas.</p></article>
+  <article class="card"><h3>Robusto</h3><p>HTML semántico y diseño adaptable para navegadores y diferentes tecnologías de apoyo.</p></article>
+</div>
+</section>
+
+<section id="contacto" aria-labelledby="contacto-title">
+<h2 id="contacto-title">Contacto</h2>
+<p>¿Tu empresa necesita apoyo para empacar, etiquetar o armar kits? Solicita información sobre el servicio y las cantidades requeridas.</p>
+<p><strong>Correo de ejemplo:</strong> contacto@manosdiversas.example</p>
+<p><strong>Nota:</strong> este correo es demostrativo para la maqueta y debe sustituirse por uno real al publicar el sitio.</p>
+</section>
+</main>
+
+<footer>
+<div class="inner">
+<p><strong>Manos Diversas</strong> — Maqueta académica de sitio web accesible.</p>
+<p>Diseño basado en los cuatro principios de la metodología POUR: Perceptible, Operable, Comprensible y Robusto.</p>
+</div>
+</footer>
+
+<script>
+let baseSize = 18;
+function changeSize(delta) {
+  baseSize = Math.min(26, Math.max(16, baseSize + delta));
+  document.body.style.fontSize = baseSize + 'px';
+}
+function toggleContrast() {
+  const on = document.body.classList.toggle('high-contrast');
+  const btn = document.getElementById('contrastBtn');
+  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+}
+</script>
+</body>
+</html>
